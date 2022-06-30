@@ -17,6 +17,9 @@ void main() async {
   FirebaseMessaging.onBackgroundMessage(backgroundHandler);
   LocalNotificationService.initialize(null);
   runApp(MyApp());
+
+  final fcmToken = await FirebaseMessaging.instance.getToken();
+  print('fcmToken: $fcmToken');
 }
 
 class MyApp extends StatelessWidget {

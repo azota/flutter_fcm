@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   /// TODO initState Method
   @override
-  void initState() {
+  Future<void> initState() {
     super.initState();
 
     LocalNotificationService.initialize(context);
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
         print(message.notification.title);
         print(message.notification.body);
         print("Foreground Message ID: ${message.data["_id"]}");
-        LocalNotificationService.createAndDisplayNotification(message);
+        //LocalNotificationService.createAndDisplayNotification(message);
       }
     });
 
