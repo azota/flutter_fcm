@@ -6,6 +6,7 @@ import 'package:flutter_push_notification_app/local_notification_service.dart';
 import 'package:flutter_push_notification_app/home_screen.dart';
 import 'package:flutter_push_notification_app/red_screen.dart';
 
+//test
 Future<void> backgroundHandler(RemoteMessage message) async {
   print(message.notification.title);
   print(message.data.toString());
